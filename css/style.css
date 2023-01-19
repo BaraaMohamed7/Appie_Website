@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -44,6 +45,10 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.grid-4c {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 section {
   padding: 9.6rem 0;
 }
@@ -70,6 +75,23 @@ section {
   color: #555;
   font-size: 1.6rem;
   line-height: 1.5;
+}
+
+.btn:link,
+.btn:visited,
+.btn {
+  border: 2px solid var(--main-bg-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: 1.2rem 3.2rem;
+  background: none;
+  border-radius: 100px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 /*------------------------------*/
@@ -238,18 +260,6 @@ li:last-child {
   gap: 3.2rem;
 }
 
-.features-btn {
-  border: 3px solid var(--main-bg-color);
-  padding: 1.2rem 3.2rem;
-  background: none;
-  border-radius: 100px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-}
-
 .features-btn ion-icon {
   font-size: 1.6rem;
 }
@@ -332,7 +342,7 @@ li:last-child {
   width: 100%;
 }
 
-.thumb-subheading {
+.subheading {
   font-size: 1.2rem;
   color: var(--primary-color);
   font-weight: 500;
@@ -367,7 +377,7 @@ li:last-child {
 }
 
 /*------------------------------*/
-/* Features */
+/* About */
 /*------------------------------*/
 
 .about-section {
@@ -463,4 +473,158 @@ li:last-child {
 
 .about-img img {
   width: 100%;
+}
+
+/*------------------------------*/
+/* Statictics */
+/*------------------------------*/
+
+.statictics {
+  margin-top: 4.8rem;
+  padding: 0 3.2rem;
+  gap: 9.6rem;
+}
+
+.statictics-item {
+  width: 20rem;
+  height: 20rem;
+  padding: 4rem;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.counter-number {
+  font-size: 3.2rem;
+}
+
+.counter-text {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.preview {
+  padding: 9.6rem 0;
+}
+
+.preview-items {
+  display: flex;
+  gap: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.preview-item:first-child {
+  position: relative;
+}
+
+.preview-item:first-child::after {
+  content: 'url(../imgs/play.svg)';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.preview-item:first-child img {
+  width: 100%;
+}
+
+.preview-item img {
+  width: 99.9%;
+}
+
+.preview-content {
+  padding: 0 9.6rem;
+  grid-template-columns: 1.4fr 0.6fr;
+  align-items: flex-start;
+}
+
+.preview-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.preview-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.preview-btn {
+  margin-top: 3.2rem;
+  width: fit-content;
+  padding: 1.6rem 2.4rem !important;
+}
+
+.preview-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+.preview-controls .btn {
+  padding: 1.2rem;
+  font-size: 1.6rem;
+}
+
+/*------------------------------*/
+/* Download */
+/*------------------------------*/
+.download-section {
+  background-color: var(--main-bg-color);
+  padding: 15rem 0;
+}
+
+.download {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 3.2rem;
+}
+
+.download-btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border: 2px solid var(--secondary-color);
+  background-color: #fff;
+  padding: 1rem 1.8rem;
+  border-radius: 15px;
+  color: var(--secondary-color);
+}
+
+.download-btn.apple {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.download-btn ion-icon {
+  font-size: 4.6rem;
+}
+
+.download-text {
+  text-align: left;
+}
+
+.download-text p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
+
+.download-text span {
+  font-size: 3.2rem;
+  font-weight: 700;
 }
